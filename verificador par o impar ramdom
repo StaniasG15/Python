@@ -1,0 +1,29 @@
+import random
+
+lista=[]
+listaPar=[]
+listaImpar=[]
+
+#Esto genera los números para que se agregue a la lista
+for i in range(10):
+    listaRandom=random.randrange(1,50)
+    lista.append(listaRandom)
+
+#Este ciclo de acá es para verificar los números que están en la lista
+for i in range(len(lista)):
+    #Esto es para ver si es par y se agregue a la lista par
+    if lista[i]%2==0:
+        print(lista[i],"Es par")
+        listaPar.append(lista[i])
+
+    #esto es para que se agregue a la lista impar
+    else:
+        lista[i]%2>=1
+        print(lista[i],"es impar")
+        listaImpar.append(lista[i])
+
+#Esto es para que imprima los números que hay en la lista par y impar respectivamente
+print("Tabla de resultados")
+print("----------------------------------------------------------------")
+print("numeros pares", "", "|", "", "números impares")
+print(listaPar, "", "|","", listaImpar)
